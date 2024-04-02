@@ -1,0 +1,458 @@
+Apr-02 13:49:08.778 [main] DEBUG nextflow.cli.Launcher - $> nextflow main.nf --igenomes_ignore true -c nextflow.config -profile docker --max_cpus 8 --max_memory 30GB -params-file nf-params_WGS_genome.json -w run08/work
+Apr-02 13:49:08.911 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 23.10.1
+Apr-02 13:49:08.938 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/root/.nextflow/plugins; core-plugins: nf-amazon@2.1.4,nf-azure@1.3.3,nf-cloudcache@0.3.0,nf-codecommit@0.1.5,nf-console@1.0.6,nf-ga4gh@1.1.0,nf-google@1.8.3,nf-tower@1.6.3,nf-wave@1.0.1
+Apr-02 13:49:08.954 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Apr-02 13:49:08.955 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Apr-02 13:49:08.959 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Apr-02 13:49:08.970 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Apr-02 13:49:08.991 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/nextflow.config
+Apr-02 13:49:08.993 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/nextflow.config
+Apr-02 13:49:08.994 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/nextflow.config
+Apr-02 13:49:08.994 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/nextflow.config
+Apr-02 13:49:09.028 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `docker`
+Apr-02 13:49:12.048 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `docker`
+Apr-02 13:49:12.632 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [cfc_dev, uzl_omics, ifb_core, test_one_sample, denbi_qbic, alice, mjolnir_globe, uppmax, incliva, ilifu, uge, rosalind_uge, lugh, unibe_ibu, vai, czbiohub_aws, jax, ccga_med, scw, unc_longleaf, tigem, tubingen_apg, google, apollo, ipop_up, vsc_calcua, pdc_kth, googlels, daisybio, eddie, medair, biowulf, apptainer, bi, bigpurple, adcra, cedars, pawsey_setonix, vsc_kul_uhasselt, pawsey_nimbus, ucl_myriad, utd_ganymede, charliecloud, icr_davros, ceres, munin, arm, rosalind, hasta, cfc, uzh, ebi_codon_slurm, ebc, ku_sund_dangpu, ccga_dx, crick, marvin, biohpc_gen, shifter, mana, mamba, york_viking, unc_lccc, wehi, awsbatch, wustl_htcf, arcc, imperial, maestro, software_license, utd_europa, genotoul, nci_gadi, abims, janelia, nu_genomics, googlebatch, oist, sahmri, mpcdf, leicester, vsc_ugent, create, sage, cambridge, jex, podman, ebi_codon, cheaha, xanadu, nyu_hpc, test, computerome, ucd_sonic, seg_globe, sanger, dkfz, pasteur, ethz_euler, m3c, test_full, imb, ucl_cscluster, tuos_stanage, azurebatch, hki, crukmi, csiro_petrichor, qmul_apocrita, docker, engaging, gis, hypatia, psmn, eva, nygc, fgcz, conda, crg, singularity, self_hosted_runner, tufts, uw_hyak_pedslabs, utd_sysbio, debug, genouest, cbe, phoenix, gitpod, seawulf, uod_hpc, fub_curta, uct_hpc, aws_tower, binac]
+Apr-02 13:49:12.671 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
+Apr-02 13:49:12.693 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [insane_babbage] DSL2 - revision: cf175b7235
+Apr-02 13:49:12.694 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins declared=[nf-validation]
+Apr-02 13:49:12.694 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Apr-02 13:49:12.695 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[nf-validation]
+Apr-02 13:49:12.695 [main] DEBUG nextflow.plugin.PluginUpdater - Installing plugin nf-validation version: latest
+Apr-02 13:49:13.197 [main] INFO  org.pf4j.AbstractPluginManager - Plugin 'nf-validation@1.1.3' resolved
+Apr-02 13:49:13.198 [main] INFO  org.pf4j.AbstractPluginManager - Start plugin 'nf-validation@1.1.3'
+Apr-02 13:49:13.203 [main] DEBUG nextflow.plugin.BasePlugin - Plugin started nf-validation@1.1.3
+Apr-02 13:49:13.210 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /root/.nextflow/secrets/store.json
+Apr-02 13:49:13.213 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@2cae5fa7] - activable => nextflow.secret.LocalSecretsProvider@2cae5fa7
+Apr-02 13:49:13.265 [main] DEBUG nextflow.Session - Session UUID: 712e65f7-87a1-41d8-80bb-ccaf4b060a08
+Apr-02 13:49:13.265 [main] DEBUG nextflow.Session - Run name: insane_babbage
+Apr-02 13:49:13.265 [main] DEBUG nextflow.Session - Executor pool size: 20
+Apr-02 13:49:13.272 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Apr-02 13:49:13.276 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=60; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Apr-02 13:49:13.289 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 23.10.1 build 5891
+  Created: 12-01-2024 22:01 UTC (13-01-2024 06:01 MYST)
+  System: Linux 6.2.0-34-generic
+  Runtime: Groovy 3.0.19 on OpenJDK 64-Bit Server VM 19.0.2+7-Ubuntu-0ubuntu322.04
+  Encoding: UTF-8 (UTF-8)
+  Process: 57664@user2-LPC2 [127.0.1.1]
+  CPUs: 20 - Mem: 31.1 GB (10.8 GB) - Swap: 0 (0)
+Apr-02 13:49:13.308 [main] DEBUG nextflow.Session - Work-dir: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/run08/work [ext2/ext3]
+Apr-02 13:49:13.331 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Apr-02 13:49:13.340 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Apr-02 13:49:13.389 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Apr-02 13:49:13.398 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 21; maxThreads: 1000
+Apr-02 13:49:13.510 [main] DEBUG nextflow.Session - Session start
+Apr-02 13:49:13.515 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/run08/pipeline_info/execution_trace_2024-04-02_13-49-12.txt
+Apr-02 13:49:13.524 [main] DEBUG nextflow.Session - Using default localLib path: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/lib
+Apr-02 13:49:13.527 [main] DEBUG nextflow.Session - Adding to the classpath library: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/lib
+Apr-02 13:49:13.527 [main] DEBUG nextflow.Session - Adding to the classpath library: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/lib/nfcore_external_java_deps.jar
+Apr-02 13:49:13.898 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Apr-02 13:49:13.924 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [validateParameters:validateParameters, paramsHelp:paramsHelp]; plugin Id: nf-validation
+Apr-02 13:49:13.939 [main] DEBUG nextflow.validation.SchemaValidator - Starting parameters validation
+Apr-02 13:49:14.067 [main] DEBUG n.validation.DirectoryPathValidator - S3 paths are not supported by 'DirectoryPathValidator': 's3://ngi-igenomes/igenomes'
+Apr-02 13:49:14.069 [main] DEBUG nextflow.validation.SchemaValidator - Starting validation: 'input': '/home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/samplesheet_single_vcf.csv' with 'assets/schema_input_vcf.json'
+Apr-02 13:49:14.090 [main] DEBUG nextflow.validation.SchemaValidator - Validation passed: 'input': '/home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/samplesheet_single_vcf.csv' with 'assets/schema_input_vcf.json'
+Apr-02 13:49:14.090 [main] DEBUG nextflow.validation.SchemaValidator - Finishing parameters validation
+Apr-02 13:49:14.460 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryLog:paramsSummaryLog, paramsSummaryMap:paramsSummaryMap, fromSamplesheet:fromSamplesheet]; plugin Id: nf-validation
+Apr-02 13:49:14.480 [main] INFO  nextflow.Nextflow - 
+
+-[2m----------------------------------------------------[0m-
+                                        [0;32m,--.[0;30m/[0;32m,-.[0m
+[0;34m        ___     __   __   __   ___     [0;32m/,-._.--~'[0m
+[0;34m  |\ | |__  __ /  ` /  \ |__) |__         [0;33m}  {[0m
+[0;34m  | \| |       \__, \__/ |  \ |___     [0;32m\`-._,-`-,[0m
+                                        [0;32m`._,._,'[0m
+[0;35m  nf-core/variant-annotation v1.1.1[0m
+-[2m----------------------------------------------------[0m-
+[1mCore Nextflow options[0m
+  [0;34mrunName          : [0;32minsane_babbage[0m
+  [0;34mcontainerEngine  : [0;32mdocker[0m
+  [0;34mlaunchDir        : [0;32m/home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation[0m
+  [0;34mworkDir          : [0;32m/home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/run08/work[0m
+  [0;34mprojectDir       : [0;32m/home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation[0m
+  [0;34muserName         : [0;32mroot[0m
+  [0;34mprofile          : [0;32mdocker[0m
+  [0;34mconfigFiles      : [0;32m[0m
+
+[1mInput/output options[0m
+  [0;34minput            : [0;32msamplesheet_single_vcf.csv[0m
+  [0;34moutdir           : [0;32mrun08/[0m
+
+[1mReference file options[0m
+  [0;34mfai              : [0;32m/home/user2/Desktop/raredisease-dev/reference/INDEX/genome.fa.fai[0m
+  [0;34mfasta            : [0;32m/home/user2/Desktop/raredisease-dev/reference/INDEX/genome.fa[0m
+  [0;34mgnomad_af        : [0;32m/home/user2/Desktop/raredisease-dev/reference/gnomad_reformated_GRCh38.tab.gz[0m
+  [0;34migenomes_ignore  : [0;32mtrue[0m
+  [0;34mmito_name        : [0;32mchrM[0m
+  [0;34mscore_config_snv : [0;32m/home/user2/Desktop/raredisease-dev/reference/rank_model_snv.ini[0m
+  [0;34mvcfanno_resources: [0;32m/home/user2/Desktop/raredisease-dev/reference/vcfanno_resources.txt[0m
+  [0;34mvcfanno_toml     : [0;32m/home/user2/Desktop/raredisease-dev/reference/vcfanno_config.toml[0m
+  [0;34mvep_cache        : [0;32m/home/user2/Desktop/raredisease-dev/reference/38/vep_cache/[0m
+  [0;34mped_file         : [0;32mNA12878.ped[0m
+
+[1mAnalysis options[0m
+  [0;34mskip_vep_filter  : [0;32mtrue[0m
+
+[1mVariant calling options[0m
+  [0;34mvariant_type     : [0;32msnp,indel[0m
+
+[1mMax job request options[0m
+  [0;34mmax_cpus         : [0;32m8[0m
+  [0;34mmax_memory       : [0;32m30GB[0m
+
+!! Only displaying parameters that differ from the pipeline defaults !!
+-[2m----------------------------------------------------[0m-
+If you use nf-core/variant-annotation for your analysis please cite:
+
+* The nf-core framework
+  https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+  https://github.com/nf-core/variant-annotation/blob/master/CITATIONS.md
+
+Apr-02 13:49:18.953 [main] DEBUG nextflow.validation.SchemaValidator - Starting validation: 'samplesheet_single_vcf.csv' with 'assets/schema_input_vcf.json'
+Apr-02 13:49:18.955 [main] DEBUG nextflow.validation.SchemaValidator - Validation passed: 'samplesheet_single_vcf.csv' with 'assets/schema_input_vcf.json'
+Apr-02 13:49:19.079 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:PREPARE_INDICES:TABIX_TABIX
+Apr-02 13:49:19.085 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 13:49:19.085 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 13:49:19.092 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Apr-02 13:49:19.099 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=20; memory=31.1 GB; capacity=20; pollInterval=100ms; dumpInterval=5m
+Apr-02 13:49:19.101 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Apr-02 13:49:19.169 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:PREPARE_REFERENCES:SAMTOOLS_FAIDX_GENOME
+Apr-02 13:49:19.170 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*PREPARE_REFERENCES:.*` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:PREPARE_REFERENCES:SAMTOOLS_FAIDX_GENOME
+Apr-02 13:49:19.171 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*PREPARE_REFERENCES:SAMTOOLS_FAIDX_GENOME` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:PREPARE_REFERENCES:SAMTOOLS_FAIDX_GENOME
+Apr-02 13:49:19.173 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 13:49:19.173 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 13:49:19.177 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:PREPARE_REFERENCES:GATK_SD
+Apr-02 13:49:19.178 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*PREPARE_REFERENCES:.*` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:PREPARE_REFERENCES:GATK_SD
+Apr-02 13:49:19.179 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*PREPARE_REFERENCES:GATK_SD` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:PREPARE_REFERENCES:GATK_SD
+Apr-02 13:49:19.179 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 13:49:19.179 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 13:49:19.185 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:PREPARE_REFERENCES:TABIX_GNOMAD_AF
+Apr-02 13:49:19.185 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*PREPARE_REFERENCES:.*` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:PREPARE_REFERENCES:TABIX_GNOMAD_AF
+Apr-02 13:49:19.185 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*PREPARE_REFERENCES:TABIX_GNOMAD_AF` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:PREPARE_REFERENCES:TABIX_GNOMAD_AF
+Apr-02 13:49:19.186 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 13:49:19.186 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 13:49:19.190 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:PREPARE_REFERENCES:UNTAR_VEP_CACHE
+Apr-02 13:49:19.191 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*PREPARE_REFERENCES:.*` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:PREPARE_REFERENCES:UNTAR_VEP_CACHE
+Apr-02 13:49:19.191 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*PREPARE_REFERENCES:UNTAR_VEP_CACHE` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:PREPARE_REFERENCES:UNTAR_VEP_CACHE
+Apr-02 13:49:19.191 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 13:49:19.191 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 13:49:19.215 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:SCATTER_GENOME:BUILD_BED
+Apr-02 13:49:19.216 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*SCATTER_GENOME:BUILD_BED` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:SCATTER_GENOME:BUILD_BED
+Apr-02 13:49:19.216 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 13:49:19.217 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 13:49:19.221 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:SCATTER_GENOME:GATK4_SPLITINTERVALS
+Apr-02 13:49:19.222 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*SCATTER_GENOME:GATK4_SPLITINTERVALS` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:SCATTER_GENOME:GATK4_SPLITINTERVALS
+Apr-02 13:49:19.222 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 13:49:19.222 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 13:49:19.242 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:BCFTOOLS_ROH
+Apr-02 13:49:19.242 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*ANNOTATE_SNVS:.*` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:BCFTOOLS_ROH
+Apr-02 13:49:19.242 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*ANNOTATE_SNVS:BCFTOOLS_ROH` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:BCFTOOLS_ROH
+Apr-02 13:49:19.243 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 13:49:19.243 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 13:49:19.247 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:RHOCALL_ANNOTATE
+Apr-02 13:49:19.248 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*ANNOTATE_SNVS:.*` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:RHOCALL_ANNOTATE
+Apr-02 13:49:19.248 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*ANNOTATE_SNVS:RHOCALL_ANNOTATE` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:RHOCALL_ANNOTATE
+Apr-02 13:49:19.249 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 13:49:19.249 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 13:49:19.252 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ZIP_TABIX_ROHCALL
+Apr-02 13:49:19.253 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*ANNOTATE_SNVS:.*` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ZIP_TABIX_ROHCALL
+Apr-02 13:49:19.254 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 13:49:19.254 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 13:49:19.259 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:VCFANNO
+Apr-02 13:49:19.259 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*ANNOTATE_SNVS:.*` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:VCFANNO
+Apr-02 13:49:19.259 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*ANNOTATE_SNVS:VCFANNO` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:VCFANNO
+Apr-02 13:49:19.260 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 13:49:19.260 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 13:49:19.262 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ZIP_TABIX_VCFANNO
+Apr-02 13:49:19.263 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*ANNOTATE_SNVS:.*` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ZIP_TABIX_VCFANNO
+Apr-02 13:49:19.264 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 13:49:19.264 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 13:49:19.268 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:BCFTOOLS_VIEW
+Apr-02 13:49:19.268 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*ANNOTATE_SNVS:.*` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:BCFTOOLS_VIEW
+Apr-02 13:49:19.268 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*ANNOTATE_SNVS:BCFTOOLS_VIEW` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:BCFTOOLS_VIEW
+Apr-02 13:49:19.269 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 13:49:19.269 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 13:49:19.273 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:TABIX_BCFTOOLS_VIEW
+Apr-02 13:49:19.273 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*ANNOTATE_SNVS:.*` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:TABIX_BCFTOOLS_VIEW
+Apr-02 13:49:19.274 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 13:49:19.274 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 13:49:19.289 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:GATK4_SELECTVARIANTS
+Apr-02 13:49:19.289 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*ANNOTATE_SNVS:.*` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:GATK4_SELECTVARIANTS
+Apr-02 13:49:19.289 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*ANNOTATE_SNVS:GATK4_SELECTVARIANTS` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:GATK4_SELECTVARIANTS
+Apr-02 13:49:19.290 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 13:49:19.290 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 13:49:19.295 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ANNOTATE_CADD:BCFTOOLS_VIEW
+Apr-02 13:49:19.295 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*ANNOTATE_SNVS:.*` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ANNOTATE_CADD:BCFTOOLS_VIEW
+Apr-02 13:49:19.296 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:ANNOTATE_CADD.*` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ANNOTATE_CADD:BCFTOOLS_VIEW
+Apr-02 13:49:19.296 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:ANNOTATE_CADD:BCFTOOLS_VIEW` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ANNOTATE_CADD:BCFTOOLS_VIEW
+Apr-02 13:49:19.296 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 13:49:19.297 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 13:49:19.301 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ANNOTATE_CADD:TABIX_VIEW
+Apr-02 13:49:19.301 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*ANNOTATE_SNVS:.*` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ANNOTATE_CADD:TABIX_VIEW
+Apr-02 13:49:19.302 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:ANNOTATE_CADD.*` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ANNOTATE_CADD:TABIX_VIEW
+Apr-02 13:49:19.302 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 13:49:19.302 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 13:49:19.307 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ANNOTATE_CADD:CADD
+Apr-02 13:49:19.307 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*ANNOTATE_SNVS:.*` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ANNOTATE_CADD:CADD
+Apr-02 13:49:19.307 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:ANNOTATE_CADD.*` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ANNOTATE_CADD:CADD
+Apr-02 13:49:19.307 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:ANNOTATE_CADD:CADD` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ANNOTATE_CADD:CADD
+Apr-02 13:49:19.308 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 13:49:19.308 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 13:49:19.310 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ANNOTATE_CADD:TABIX_CADD
+Apr-02 13:49:19.311 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*ANNOTATE_SNVS:.*` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ANNOTATE_CADD:TABIX_CADD
+Apr-02 13:49:19.311 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:ANNOTATE_CADD.*` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ANNOTATE_CADD:TABIX_CADD
+Apr-02 13:49:19.311 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:ANNOTATE_CADD:TABIX_CADD` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ANNOTATE_CADD:TABIX_CADD
+Apr-02 13:49:19.312 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 13:49:19.312 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 13:49:19.320 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ANNOTATE_CADD:BCFTOOLS_ANNOTATE
+Apr-02 13:49:19.320 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*ANNOTATE_SNVS:.*` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ANNOTATE_CADD:BCFTOOLS_ANNOTATE
+Apr-02 13:49:19.321 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:ANNOTATE_CADD.*` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ANNOTATE_CADD:BCFTOOLS_ANNOTATE
+Apr-02 13:49:19.321 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:ANNOTATE_CADD:BCFTOOLS_ANNOTATE` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ANNOTATE_CADD:BCFTOOLS_ANNOTATE
+Apr-02 13:49:19.321 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 13:49:19.321 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 13:49:19.324 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ANNOTATE_CADD:TABIX_ANNOTATE
+Apr-02 13:49:19.324 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*ANNOTATE_SNVS:.*` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ANNOTATE_CADD:TABIX_ANNOTATE
+Apr-02 13:49:19.324 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*:ANNOTATE_CADD.*` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ANNOTATE_CADD:TABIX_ANNOTATE
+Apr-02 13:49:19.325 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 13:49:19.325 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 13:49:19.349 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ENSEMBLVEP_SNV
+Apr-02 13:49:19.349 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*ANNOTATE_SNVS:.*` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ENSEMBLVEP_SNV
+Apr-02 13:49:19.350 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*ANNOTATE_SNVS:ENSEMBLVEP_SNV` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ENSEMBLVEP_SNV
+Apr-02 13:49:19.351 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 13:49:19.351 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 13:49:19.358 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:TABIX_VEP
+Apr-02 13:49:19.358 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*ANNOTATE_SNVS:.*` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:TABIX_VEP
+Apr-02 13:49:19.359 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 13:49:19.359 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 13:49:19.370 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:BCFTOOLS_CONCAT
+Apr-02 13:49:19.371 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*ANNOTATE_SNVS:.*` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:BCFTOOLS_CONCAT
+Apr-02 13:49:19.371 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 13:49:19.371 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 13:49:19.374 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:TABIX_BCFTOOLS_CONCAT
+Apr-02 13:49:19.374 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*ANNOTATE_SNVS:.*` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:TABIX_BCFTOOLS_CONCAT
+Apr-02 13:49:19.375 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 13:49:19.376 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 13:49:19.398 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANN_CSQ_PLI_SNV:ADD_MOST_SEVERE_CSQ
+Apr-02 13:49:19.398 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*ANN_CSQ_PLI_SNV:.*` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANN_CSQ_PLI_SNV:ADD_MOST_SEVERE_CSQ
+Apr-02 13:49:19.398 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*ANN_CSQ_PLI_SNV:ADD_MOST_SEVERE_CSQ` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANN_CSQ_PLI_SNV:ADD_MOST_SEVERE_CSQ
+Apr-02 13:49:19.399 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 13:49:19.399 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 13:49:19.405 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANN_CSQ_PLI_SNV:ADD_MOST_SEVERE_PLI
+Apr-02 13:49:19.405 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*ANN_CSQ_PLI_SNV:.*` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANN_CSQ_PLI_SNV:ADD_MOST_SEVERE_PLI
+Apr-02 13:49:19.406 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*ANN_CSQ_PLI_SNV:ADD_MOST_SEVERE_PLI` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANN_CSQ_PLI_SNV:ADD_MOST_SEVERE_PLI
+Apr-02 13:49:19.407 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 13:49:19.407 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 13:49:19.414 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANN_CSQ_PLI_SNV:TABIX_BGZIPTABIX
+Apr-02 13:49:19.414 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*ANN_CSQ_PLI_SNV:.*` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANN_CSQ_PLI_SNV:TABIX_BGZIPTABIX
+Apr-02 13:49:19.415 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 13:49:19.415 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 13:49:19.426 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:RANK_VARIANTS_SNV:GENMOD_ANNOTATE
+Apr-02 13:49:19.426 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*RANK_VARIANTS_SNV:.*` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:RANK_VARIANTS_SNV:GENMOD_ANNOTATE
+Apr-02 13:49:19.426 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*RANK_VARIANTS_SNV:GENMOD_ANNOTATE` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:RANK_VARIANTS_SNV:GENMOD_ANNOTATE
+Apr-02 13:49:19.427 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 13:49:19.427 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 13:49:19.432 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:RANK_VARIANTS_SNV:GENMOD_MODELS
+Apr-02 13:49:19.432 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*RANK_VARIANTS_SNV:.*` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:RANK_VARIANTS_SNV:GENMOD_MODELS
+Apr-02 13:49:19.432 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*RANK_VARIANTS_SNV:GENMOD_MODELS` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:RANK_VARIANTS_SNV:GENMOD_MODELS
+Apr-02 13:49:19.433 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 13:49:19.433 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 13:49:19.438 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:RANK_VARIANTS_SNV:GENMOD_SCORE
+Apr-02 13:49:19.438 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*RANK_VARIANTS_SNV:.*` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:RANK_VARIANTS_SNV:GENMOD_SCORE
+Apr-02 13:49:19.438 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*RANK_VARIANTS_SNV:GENMOD_SCORE` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:RANK_VARIANTS_SNV:GENMOD_SCORE
+Apr-02 13:49:19.439 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 13:49:19.439 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 13:49:19.443 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:RANK_VARIANTS_SNV:GENMOD_COMPOUND
+Apr-02 13:49:19.444 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*RANK_VARIANTS_SNV:.*` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:RANK_VARIANTS_SNV:GENMOD_COMPOUND
+Apr-02 13:49:19.444 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*RANK_VARIANTS_SNV:GENMOD_COMPOUND` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:RANK_VARIANTS_SNV:GENMOD_COMPOUND
+Apr-02 13:49:19.445 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 13:49:19.445 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 13:49:19.449 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:RANK_VARIANTS_SNV:TABIX_BGZIPTABIX
+Apr-02 13:49:19.449 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*RANK_VARIANTS_SNV:.*` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:RANK_VARIANTS_SNV:TABIX_BGZIPTABIX
+Apr-02 13:49:19.449 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*RANK_VARIANTS_SNV:TABIX_BGZIPTABIX` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:RANK_VARIANTS_SNV:TABIX_BGZIPTABIX
+Apr-02 13:49:19.450 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 13:49:19.450 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 13:49:19.462 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:FILTER_VEP_SNV
+Apr-02 13:49:19.462 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*FILTER_VEP_SNV` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:FILTER_VEP_SNV
+Apr-02 13:49:19.462 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*FILTER_VEP_SNV` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:FILTER_VEP_SNV
+Apr-02 13:49:19.463 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 13:49:19.463 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 13:49:19.487 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:CUSTOM_DUMPSOFTWAREVERSIONS
+Apr-02 13:49:19.487 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:CUSTOM_DUMPSOFTWAREVERSIONS` matches process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:CUSTOM_DUMPSOFTWAREVERSIONS
+Apr-02 13:49:19.488 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 13:49:19.488 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 13:49:19.490 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: TABIX_BCFTOOLS_VIEW, TABIX_BCFTOOLS_CONCAT, NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:FILTER_VEP_SNV, NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:GATK4_SELECTVARIANTS, UPD, TABIX_BGZIPTABIX, GATK4_CREATESEQUENCEDICTIONARY, NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ZIP_TABIX_ROHCALL, NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:CUSTOM_DUMPSOFTWAREVERSIONS, ZIP_TABIX_ROHCALL, TABIX_VIEW, GATK4_PREPROCESSINTERVALS, CHROMOGRAPH, NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:SCATTER_GENOME:GATK4_SPLITINTERVALS, BWAMEM2_INDEX, CHROMOGRAPH_SITES, ZIP_TABIX_VCFANNO, ADD_MOST_SEVERE_CSQ, NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:PREPARE_REFERENCES:SAMTOOLS_FAIDX_GENOME, NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:PREPARE_INDICES:TABIX_TABIX, NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:SCATTER_GENOME:BUILD_BED, BCFTOOLS_CONCAT, ADD_MOST_SEVERE_PLI, NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:TABIX_BCFTOOLS_CONCAT, NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ANNOTATE_CADD:BCFTOOLS_ANNOTATE, UPD_SITES, TABIX_TABIX, CADD, PEDDY, SAMTOOLS_FAIDX_MT_SHIFT, NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:RHOCALL_ANNOTATE, NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:RANK_VARIANTS_SNV:GENMOD_ANNOTATE, SAMTOOLS_FAIDX_GENOME, ENSEMBLVEP_SNV, FILTER_VEP, GET_CHROM_SIZES, CAT_CAT, NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:BCFTOOLS_ROH, TABIX_ANNOTATE, BUILD_BED, GENMOD_ANNOTATE, SAMTOOLS_FAIDX, GATK4_SPLITINTERVALS, UNTAR_VEP_CACHE, NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:VCFANNO, FILTER_VEP_SNV, BCFTOOLS_VIEW, NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ZIP_TABIX_VCFANNO, NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:RANK_VARIANTS_SNV:GENMOD_MODELS, NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:PREPARE_REFERENCES:TABIX_GNOMAD_AF, NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ENSEMBLVEP_SNV, NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:BCFTOOLS_CONCAT, NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ANNOTATE_CADD:TABIX_VIEW, SAMTOOLS_EXTRACT_MT, GATK4_INTERVALLISTTOOLS, GATK4_SELECTVARIANTS, UPD_REGIONS, GATK4_BEDTOINTERVALLIST, NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ANNOTATE_CADD:CADD, BCFTOOLS_ROH, GATK_PREPROCESS_WGS, NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANN_CSQ_PLI_SNV:TABIX_BGZIPTABIX, TABIX_GNOMAD_AF, TABIX_PT, ENSEMBLVEP, RHOCALL_ANNOTATE, UNTAR, NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:TABIX_BCFTOOLS_VIEW, BWA_INDEX_GENOME, GENMOD_MODELS, NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:RANK_VARIANTS_SNV:GENMOD_COMPOUND, GATK_ILT, GATK4_SHIFTFASTA, BCFTOOLS_ANNOTATE, NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:BCFTOOLS_VIEW, NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ANNOTATE_CADD:BCFTOOLS_VIEW, TABIX_VEP, GATK_BILT, NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:TABIX_VEP, VCFANNO, BWAMEM2_INDEX_GENOME, NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:PREPARE_REFERENCES:UNTAR_VEP_CACHE, NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ANNOTATE_CADD:TABIX_CADD, NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:RANK_VARIANTS_SNV:GENMOD_SCORE, NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:RANK_VARIANTS_SNV:TABIX_BGZIPTABIX, BWAMEM2_INDEX_MT_SHIFT, TABIX_PBT, TABIX_DBSNP, BWA_INDEX, CAT_CAT_BAIT, CHROMOGRAPH_REGIONS, GATK_SD_MT_SHIFT, GATK_SHIFTFASTA, TABIX_CADD, NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:PREPARE_REFERENCES:GATK_SD, NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANN_CSQ_PLI_SNV:ADD_MOST_SEVERE_CSQ, GATK_PREPROCESS_WES, GENMOD_SCORE, GATK_SD, CUSTOM_DUMPSOFTWAREVERSIONS, NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANN_CSQ_PLI_SNV:ADD_MOST_SEVERE_PLI, GENMOD_COMPOUND, NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ANNOTATE_CADD:TABIX_ANNOTATE
+Apr-02 13:49:19.514 [main] WARN  nextflow.Session - There's no process matching config selector: .*ANNOTATE_SNVS:UPD_SITES
+Apr-02 13:49:19.515 [main] WARN  nextflow.Session - There's no process matching config selector: .*ANNOTATE_SNVS:UPD_REGIONS
+Apr-02 13:49:19.515 [main] WARN  nextflow.Session - There's no process matching config selector: .*ANNOTATE_SNVS:CHROMOGRAPH_SITES
+Apr-02 13:49:19.515 [main] WARN  nextflow.Session - There's no process matching config selector: .*ANNOTATE_SNVS:CHROMOGRAPH_REGIONS
+Apr-02 13:49:19.517 [main] DEBUG nextflow.Session - Igniting dataflow network (68)
+Apr-02 13:49:19.523 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:PREPARE_INDICES:TABIX_TABIX
+Apr-02 13:49:19.523 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:PREPARE_REFERENCES:SAMTOOLS_FAIDX_GENOME
+Apr-02 13:49:19.523 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:PREPARE_REFERENCES:GATK_SD
+Apr-02 13:49:19.523 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:PREPARE_REFERENCES:TABIX_GNOMAD_AF
+Apr-02 13:49:19.524 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:PREPARE_REFERENCES:UNTAR_VEP_CACHE
+Apr-02 13:49:19.525 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:SCATTER_GENOME:BUILD_BED
+Apr-02 13:49:19.525 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:SCATTER_GENOME:GATK4_SPLITINTERVALS
+Apr-02 13:49:19.525 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:BCFTOOLS_ROH
+Apr-02 13:49:19.526 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:RHOCALL_ANNOTATE
+Apr-02 13:49:19.526 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ZIP_TABIX_ROHCALL
+Apr-02 13:49:19.526 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:VCFANNO
+Apr-02 13:49:19.526 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ZIP_TABIX_VCFANNO
+Apr-02 13:49:19.526 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:BCFTOOLS_VIEW
+Apr-02 13:49:19.527 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:TABIX_BCFTOOLS_VIEW
+Apr-02 13:49:19.527 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:GATK4_SELECTVARIANTS
+Apr-02 13:49:19.528 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ANNOTATE_CADD:BCFTOOLS_VIEW
+Apr-02 13:49:19.528 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ANNOTATE_CADD:TABIX_VIEW
+Apr-02 13:49:19.528 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ANNOTATE_CADD:CADD
+Apr-02 13:49:19.528 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ANNOTATE_CADD:TABIX_CADD
+Apr-02 13:49:19.528 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ANNOTATE_CADD:BCFTOOLS_ANNOTATE
+Apr-02 13:49:19.528 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ANNOTATE_CADD:TABIX_ANNOTATE
+Apr-02 13:49:19.528 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ENSEMBLVEP_SNV
+Apr-02 13:49:19.528 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:TABIX_VEP
+Apr-02 13:49:19.528 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:BCFTOOLS_CONCAT
+Apr-02 13:49:19.528 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:TABIX_BCFTOOLS_CONCAT
+Apr-02 13:49:19.528 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANN_CSQ_PLI_SNV:ADD_MOST_SEVERE_CSQ
+Apr-02 13:49:19.528 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANN_CSQ_PLI_SNV:ADD_MOST_SEVERE_PLI
+Apr-02 13:49:19.529 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANN_CSQ_PLI_SNV:TABIX_BGZIPTABIX
+Apr-02 13:49:19.529 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:RANK_VARIANTS_SNV:GENMOD_ANNOTATE
+Apr-02 13:49:19.530 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:RANK_VARIANTS_SNV:GENMOD_MODELS
+Apr-02 13:49:19.530 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:RANK_VARIANTS_SNV:GENMOD_SCORE
+Apr-02 13:49:19.530 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:RANK_VARIANTS_SNV:GENMOD_COMPOUND
+Apr-02 13:49:19.530 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:RANK_VARIANTS_SNV:TABIX_BGZIPTABIX
+Apr-02 13:49:19.530 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:FILTER_VEP_SNV
+Apr-02 13:49:19.530 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:CUSTOM_DUMPSOFTWAREVERSIONS
+Apr-02 13:49:19.530 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_d9390d6eca32b31c: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/./workflows/../subworkflows/local/../../modules/local/add_most_severe_consequence.nf
+  Script_8ee2d5ae92f344ac: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/./workflows/../subworkflows/local/rank_variants.nf
+  Script_7e5998f6d4116f9d: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/./workflows/../subworkflows/local/peddy_check.nf
+  Script_7c67480c626f0d5c: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/./workflows/../subworkflows/local/../../modules/nf-core/genmod/annotate/main.nf
+  Script_62afbdd2fd09b224: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/./workflows/../subworkflows/local/prepare_references.nf
+  Script_11e7787c274e744e: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/./workflows/../subworkflows/local/../../modules/local/create_bed_from_fai.nf
+  Script_3db7fa4ae2d56d2f: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/./workflows/../subworkflows/local/../../modules/nf-core/gatk4/splitintervals/main.nf
+  Script_1d0dea3e0e5ad1c7: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/./workflows/../subworkflows/local/../../modules/nf-core/upd/main.nf
+  Script_794f73ffb485f9cc: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/./workflows/../subworkflows/local/../../modules/nf-core/vcfanno/main.nf
+  Script_9741291bb7fb84e3: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/./workflows/../subworkflows/local/annotate_consequence_pli.nf
+  Script_a3346290daa00aa2: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/main.nf
+  Script_430407ee15544f37: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/./workflows/../subworkflows/local/../../modules/local/get_chrom_sizes.nf
+  Script_ebdb5e2889c012a0: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/./workflows/../subworkflows/local/../../modules/nf-core/bwamem2/index/main.nf
+  Script_a6f38fb94ad178a6: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/./workflows/../subworkflows/local/../../modules/nf-core/gatk4/selectvariants/main.nf
+  Script_c0e46675f32e7b0b: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/./workflows/../subworkflows/local/../../modules/nf-core/bcftools/view/main.nf
+  Script_017af98017803494: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/./workflows/../subworkflows/local/./annotation/../../../modules/nf-core/cadd/main.nf
+  Script_af113dbd56864188: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/./workflows/../subworkflows/local/../../modules/local/add_most_severe_pli.nf
+  Script_014ef5f0b2f61737: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/./workflows/../subworkflows/local/annotate_snvs.nf
+  Script_68e4c769a07528f6: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/./workflows/../subworkflows/local/../../modules/nf-core/gatk4/intervallisttools/main.nf
+  Script_5731b6d099ac3341: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/./workflows/../subworkflows/local/../../modules/nf-core/gatk4/preprocessintervals/main.nf
+  Script_f53572539331d98c: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/./workflows/../subworkflows/local/./annotation/annotate_cadd.nf
+  Script_962e7d092e463c46: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/./workflows/../modules/nf-core/custom/dumpsoftwareversions/main.nf
+  Script_8ab86255d0e512fe: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/./workflows/../subworkflows/local/../../modules/nf-core/genmod/models/main.nf
+  Script_0f578150038e7c70: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/./workflows/../subworkflows/local/../../modules/nf-core/gatk4/bedtointervallist/main.nf
+  Script_e90d2774c8b9cfa9: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/./workflows/../subworkflows/local/../../modules/nf-core/peddy/main.nf
+  Script_0f17bc07b58b2f17: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/./workflows/../subworkflows/local/../../modules/nf-core/gatk4/shiftfasta/main.nf
+  Script_959e57c0ed4c6819: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/./workflows/../subworkflows/local/../../modules/nf-core/gatk4/createsequencedictionary/main.nf
+  Script_626d67f6260c474c: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/./workflows/../subworkflows/local/../../modules/nf-core/untar/main.nf
+  Script_195cc2af73dad6d1: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/./workflows/../subworkflows/local/./annotation/../../../modules/nf-core/bcftools/annotate/main.nf
+  Script_6e410c7e44e05c2b: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/./workflows/../subworkflows/local/../../modules/local/ensemblvep/main.nf
+  Script_e71ed53170cf467a: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/./workflows/../subworkflows/local/prepare_indices.nf
+  Script_c9e244769d8fc18a: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/./workflows/../subworkflows/local/../../modules/nf-core/bcftools/roh/main.nf
+  Script_a60ce737dacf00f7: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/./workflows/../subworkflows/local/../../modules/nf-core/bwa/index/main.nf
+  Script_e83bf2bfc668d38b: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/./workflows/../subworkflows/local/../../modules/nf-core/cat/cat/main.nf
+  Script_775d2db39803929f: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/./workflows/../modules/local/filter_vep.nf
+  Script_773e8f87d1178b18: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/./workflows/variant-annotation.nf
+  Script_59fd339ba611f723: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/./workflows/../subworkflows/local/../../modules/nf-core/genmod/compound/main.nf
+  Script_78fcf8a36369d4fe: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/./workflows/../subworkflows/local/../../modules/nf-core/chromograph/main.nf
+  Script_bcf20abcc49f0a5b: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/./workflows/../subworkflows/local/../../modules/nf-core/bcftools/concat/main.nf
+  Script_64a7cb1a2b2e813a: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/./workflows/../subworkflows/local/../../modules/nf-core/rhocall/annotate/main.nf
+  Script_b6064a8293af64fc: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/./workflows/../subworkflows/local/./annotation/../../../modules/nf-core/tabix/tabix/main.nf
+  Script_0638cb0b3ce4c59b: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/./workflows/../subworkflows/local/../../modules/nf-core/tabix/bgziptabix/main.nf
+  Script_82c5624f5f63abe7: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/./workflows/../subworkflows/local/../../modules/nf-core/samtools/faidx/main.nf
+  Script_8eea7053c1dc301b: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/./workflows/../subworkflows/local/../../modules/nf-core/genmod/score/main.nf
+  Script_55df193f6b365aa6: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/./workflows/../subworkflows/local/scatter_genome.nf
+Apr-02 13:49:19.531 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Apr-02 13:49:19.531 [main] DEBUG nextflow.Session - Session await
+Apr-02 13:49:19.701 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 13:49:19.703 [Task submitter] INFO  nextflow.Session - [3c/f8f976] Submitted process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:PREPARE_REFERENCES:TABIX_GNOMAD_AF (home)
+Apr-02 13:49:19.710 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 13:49:19.711 [Task submitter] INFO  nextflow.Session - [c3/ee93d4] Submitted process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:SCATTER_GENOME:BUILD_BED (home)
+Apr-02 13:49:21.675 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:SCATTER_GENOME:BUILD_BED (home); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/run08/work/c3/ee93d4b0cf32ab4726bf3742cbacd1]
+Apr-02 13:52:13.553 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:PREPARE_REFERENCES:TABIX_GNOMAD_AF (home); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/run08/work/3c/f8f9760f87bd69e58139c600f0e407]
+Apr-02 13:52:13.560 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 13:52:13.561 [Task submitter] INFO  nextflow.Session - [18/bac012] Submitted process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:PREPARE_REFERENCES:GATK_SD (genome.fa)
+Apr-02 13:52:13.672 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:PREPARE_REFERENCES:TABIX_GNOMAD_AF > Skipping output binding because one or more optional files are missing: fileoutparam<1:1>
+Apr-02 13:52:45.825 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:PREPARE_REFERENCES:GATK_SD (genome.fa); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/run08/work/18/bac0120f42d454670ad2ad173a8174]
+Apr-02 13:52:45.846 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 13:52:45.847 [Task submitter] INFO  nextflow.Session - [f3/d49822] Submitted process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:BCFTOOLS_ROH (NA12878)
+Apr-02 13:54:19.297 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:BCFTOOLS_ROH (NA12878); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/run08/work/f3/d49822eba396a9313e5fd269202bdc]
+Apr-02 13:54:19.882 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 7; name: NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:SCATTER_GENOME:GATK4_SPLITINTERVALS (home); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/run08/work/e7/fb740a6a04d3a9685694a696cda935]
+Apr-02 13:56:39.038 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:BCFTOOLS_ROH (NA12878); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/run08/work/f3/d49822eba396a9313e5fd269202bdc]
+Apr-02 13:56:39.044 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 13:56:39.045 [Task submitter] INFO  nextflow.Session - [e7/fb740a] Submitted process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:SCATTER_GENOME:GATK4_SPLITINTERVALS (home)
+Apr-02 13:56:45.307 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:SCATTER_GENOME:GATK4_SPLITINTERVALS (home); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/run08/work/e7/fb740a6a04d3a9685694a696cda935]
+Apr-02 13:56:45.313 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 13:56:45.314 [Task submitter] INFO  nextflow.Session - [8b/55a25d] Submitted process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:RHOCALL_ANNOTATE (NA12878)
+Apr-02 13:56:51.344 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:RHOCALL_ANNOTATE (NA12878); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/run08/work/8b/55a25d2d58c5a9529feaf9ccd03082]
+Apr-02 13:56:51.358 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 13:56:51.358 [Task submitter] INFO  nextflow.Session - [af/bd43e0] Submitted process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ZIP_TABIX_ROHCALL (NA12878)
+Apr-02 13:56:53.601 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ZIP_TABIX_ROHCALL (NA12878); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/run08/work/af/bd43e0a2c5f334cadb1119ab3cad13]
+Apr-02 13:56:53.607 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ZIP_TABIX_ROHCALL > Skipping output binding because one or more optional files are missing: fileoutparam<1:2>
+Apr-02 13:56:53.620 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 13:56:53.621 [Task submitter] INFO  nextflow.Session - [78/dddec3] Submitted process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:VCFANNO (NA12878)
+Apr-02 13:56:57.053 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 10; name: NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:VCFANNO (NA12878); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/run08/work/78/dddec3d94351e3c62399533d243d82]
+Apr-02 13:56:57.076 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 13:56:57.077 [Task submitter] INFO  nextflow.Session - [16/6c3c4d] Submitted process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ZIP_TABIX_VCFANNO (NA12878)
+Apr-02 13:56:59.135 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 11; name: NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ZIP_TABIX_VCFANNO (NA12878); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/run08/work/16/6c3c4dfa1602b2e178fcb1699af0b2]
+Apr-02 13:56:59.139 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:ZIP_TABIX_VCFANNO > Skipping output binding because one or more optional files are missing: fileoutparam<1:2>
+Apr-02 13:56:59.149 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 13:56:59.150 [Task submitter] INFO  nextflow.Session - [db/45031d] Submitted process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:BCFTOOLS_VIEW (NA12878)
+Apr-02 13:57:01.336 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 12; name: NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:BCFTOOLS_VIEW (NA12878); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/run08/work/db/45031d13f8bb06750b1454fb75a238]
+Apr-02 13:57:01.348 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 13:57:01.348 [Task submitter] INFO  nextflow.Session - [7c/fba3d4] Submitted process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:TABIX_BCFTOOLS_VIEW (NA12878)
+Apr-02 13:57:02.598 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 13; name: NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:TABIX_BCFTOOLS_VIEW (NA12878); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/run08/work/7c/fba3d41216225a512083273ca4ba83]
+Apr-02 13:57:02.600 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:TABIX_BCFTOOLS_VIEW > Skipping output binding because one or more optional files are missing: fileoutparam<1:1>
+Apr-02 13:57:02.620 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 13:57:02.621 [Task submitter] INFO  nextflow.Session - [66/eae04c] Submitted process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:GATK4_SELECTVARIANTS (NA12878)
+Apr-02 13:57:09.816 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 16; name: NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:GATK4_SELECTVARIANTS (NA12878); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/run08/work/66/eae04cbf8c53dc0f59b13e9203689d]
+Apr-02 13:57:09.822 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 13:57:09.823 [Task submitter] INFO  nextflow.Session - [5d/00aeba] Submitted process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:GATK4_SELECTVARIANTS (NA12878)
+Apr-02 13:57:16.980 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 21; name: NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:GATK4_SELECTVARIANTS (NA12878); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/run08/work/5d/00aeba8b43d6f04e467af6b3efef5e]
+Apr-02 13:57:16.985 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 13:57:16.985 [Task submitter] INFO  nextflow.Session - [b4/8b730d] Submitted process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:GATK4_SELECTVARIANTS (NA12878)
+Apr-02 13:57:24.879 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 25; name: NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:GATK4_SELECTVARIANTS (NA12878); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/run08/work/b4/8b730dd0ee47704db3e5fb0c087bda]
+Apr-02 13:57:24.886 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 13:57:24.887 [Task submitter] INFO  nextflow.Session - [e8/823525] Submitted process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:GATK4_SELECTVARIANTS (NA12878)
+Apr-02 13:57:32.999 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 22; name: NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:GATK4_SELECTVARIANTS (NA12878); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/run08/work/e8/8235252bbf6be13e84d1adde5b2092]
+Apr-02 13:57:33.003 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 13:57:33.004 [Task submitter] INFO  nextflow.Session - [65/6e9013] Submitted process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:GATK4_SELECTVARIANTS (NA12878)
+Apr-02 13:57:41.026 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 18; name: NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:GATK4_SELECTVARIANTS (NA12878); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/run08/work/65/6e901356aea66ef00b3da6c213683c]
+Apr-02 13:57:41.030 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 13:57:41.031 [Task submitter] INFO  nextflow.Session - [c9/cd5c99] Submitted process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:GATK4_SELECTVARIANTS (NA12878)
+Apr-02 13:57:47.854 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 30; name: NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:GATK4_SELECTVARIANTS (NA12878); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/run08/work/c9/cd5c99db6b5eabf42afa0cd0d3f589]
+Apr-02 13:57:47.859 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 13:57:47.860 [Task submitter] INFO  nextflow.Session - [e2/d1ec24] Submitted process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:GATK4_SELECTVARIANTS (NA12878)
+Apr-02 13:57:54.829 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 19; name: NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:GATK4_SELECTVARIANTS (NA12878); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/run08/work/e2/d1ec244462411ad638ac06ae614061]
+Apr-02 13:57:54.834 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 13:57:54.835 [Task submitter] INFO  nextflow.Session - [8d/a771f1] Submitted process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:GATK4_SELECTVARIANTS (NA12878)
+Apr-02 13:58:01.824 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 27; name: NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:GATK4_SELECTVARIANTS (NA12878); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/run08/work/8d/a771f198bb9abb2747c75df13f2995]
+Apr-02 13:58:01.830 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 13:58:01.830 [Task submitter] INFO  nextflow.Session - [32/1cc329] Submitted process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:GATK4_SELECTVARIANTS (NA12878)
+Apr-02 13:58:08.732 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 24; name: NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:GATK4_SELECTVARIANTS (NA12878); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/run08/work/32/1cc329def79f4cdb5dd4a33e00eb80]
+Apr-02 13:58:08.736 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 13:58:08.736 [Task submitter] INFO  nextflow.Session - [a4/61cb4f] Submitted process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:GATK4_SELECTVARIANTS (NA12878)
+Apr-02 13:58:15.514 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 29; name: NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:GATK4_SELECTVARIANTS (NA12878); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/run08/work/a4/61cb4ffd248241ea6ac2e6189c4061]
+Apr-02 13:58:15.518 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 13:58:15.518 [Task submitter] INFO  nextflow.Session - [f9/210eee] Submitted process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:GATK4_SELECTVARIANTS (NA12878)
+Apr-02 13:58:22.787 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 28; name: NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:GATK4_SELECTVARIANTS (NA12878); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/run08/work/f9/210eeec811181be56270df6a3a206f]
+Apr-02 13:58:22.795 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 13:58:22.795 [Task submitter] INFO  nextflow.Session - [0b/48aa23] Submitted process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:GATK4_SELECTVARIANTS (NA12878)
+Apr-02 13:58:29.868 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 20; name: NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:GATK4_SELECTVARIANTS (NA12878); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/run08/work/0b/48aa23c30cb7b4c2d88021fab74ec1]
+Apr-02 13:58:29.874 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 13:58:29.874 [Task submitter] INFO  nextflow.Session - [8f/9637a1] Submitted process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:GATK4_SELECTVARIANTS (NA12878)
+Apr-02 13:58:36.907 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 17; name: NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:GATK4_SELECTVARIANTS (NA12878); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/run08/work/8f/9637a1997c1ee0ffdabac35ad803b5]
+Apr-02 13:58:36.912 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 13:58:36.912 [Task submitter] INFO  nextflow.Session - [2e/f46a28] Submitted process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:GATK4_SELECTVARIANTS (NA12878)
+Apr-02 13:58:44.338 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 15; name: NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:GATK4_SELECTVARIANTS (NA12878); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/run08/work/2e/f46a281937dd738a0e1ef66b9e2dff]
+Apr-02 13:58:44.343 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 13:58:44.343 [Task submitter] INFO  nextflow.Session - [00/17a431] Submitted process > NFCORE_VARIANT_ANNOTATION:VARIANT_ANNOTATION:ANNOTATE_SNVS:GATK4_SELECTVARIANTS (NA12878)

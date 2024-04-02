@@ -1,0 +1,4 @@
+2024-04-02 05:56:47,125 rhocall.cli  INFO     Running rhocall annotate  0.5.1
+[2024-04-02 05:56:47,125] rhocall.cli               INFO     Running rhocall annotate  0.5.1
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/AZ" is invalid, forcing Number=0
+[W::bcf_hdr_register_hrec] The definition of Flag "INFO/HW" is invalid, forcing Number=0

@@ -1,0 +1,17 @@
+nextflow.trace/v2
+realtime=5000
+%cpu=2075
+cpu_model=12th Gen Intel(R) Core(TM) i7-12700H
+rchar=94925539
+wchar=1512170
+syscr=40378
+syscw=244
+read_bytes=1687552
+write_bytes=1646592
+%mem=7
+vmem=13270544
+rss=221236
+peak_vmem=13270548
+peak_rss=221236
+vol_ctxt=11
+inv_ctxt=9

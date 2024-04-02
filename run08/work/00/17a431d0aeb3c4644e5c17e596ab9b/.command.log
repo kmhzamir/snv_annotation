@@ -1,0 +1,35 @@
+Using GATK jar /usr/local/share/gatk4-4.4.0.0-0/gatk-package-4.4.0.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -Xmx24576M -jar /usr/local/share/gatk4-4.4.0.0-0/gatk-package-4.4.0.0-local.jar SelectVariants --variant NA12878_rohann_vcfanno_filter.vcf.gz --output NA12878_0000-scattered.selectvariants.vcf.gz --intervals 0000-scattered.interval_list --tmp-dir .
+05:58:47.732 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/usr/local/share/gatk4-4.4.0.0-0/gatk-package-4.4.0.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+05:58:47.794 INFO  SelectVariants - ------------------------------------------------------------
+05:58:47.799 INFO  SelectVariants - The Genome Analysis Toolkit (GATK) v4.4.0.0
+05:58:47.800 INFO  SelectVariants - For support and documentation go to https://software.broadinstitute.org/gatk/
+05:58:47.800 INFO  SelectVariants - Executing as root@558cfa4f0e66 on Linux v6.2.0-34-generic amd64
+05:58:47.800 INFO  SelectVariants - Java runtime: OpenJDK 64-Bit Server VM v17.0.3-internal+0-adhoc..src
+05:58:47.800 INFO  SelectVariants - Start Date/Time: April 2, 2024 at 5:58:47 AM GMT
+05:58:47.800 INFO  SelectVariants - ------------------------------------------------------------
+05:58:47.801 INFO  SelectVariants - ------------------------------------------------------------
+05:58:47.802 INFO  SelectVariants - HTSJDK Version: 3.0.5
+05:58:47.802 INFO  SelectVariants - Picard Version: 3.0.0
+05:58:47.803 INFO  SelectVariants - Built for Spark Version: 3.3.1
+05:58:47.803 INFO  SelectVariants - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+05:58:47.803 INFO  SelectVariants - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+05:58:47.803 INFO  SelectVariants - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+05:58:47.804 INFO  SelectVariants - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+05:58:47.804 INFO  SelectVariants - Deflater: IntelDeflater
+05:58:47.804 INFO  SelectVariants - Inflater: IntelInflater
+05:58:47.804 INFO  SelectVariants - GCS max retries/reopens: 20
+05:58:47.805 INFO  SelectVariants - Requester pays: disabled
+05:58:47.805 INFO  SelectVariants - Initializing engine
+05:58:47.942 INFO  FeatureManager - Using codec VCFCodec to read file file:///home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/run08/work/00/17a431d0aeb3c4644e5c17e596ab9b/NA12878_rohann_vcfanno_filter.vcf.gz
+05:58:48.226 INFO  FeatureManager - Using codec IntervalListCodec to read file file:///home/user2/Downloads/raredisease-dev_1/raredisease-1.1.1_snv_variant_annotation/run08/work/00/17a431d0aeb3c4644e5c17e596ab9b/0000-scattered.interval_list
+05:58:48.264 INFO  IntervalArgumentCollection - Processing 248956422 bp from intervals
+05:58:48.282 INFO  SelectVariants - Done initializing engine
+05:58:48.340 INFO  ProgressMeter - Starting traversal
+05:58:48.341 INFO  ProgressMeter -        Current Locus  Elapsed Minutes    Variants Processed  Variants/Minute
+05:58:49.215 INFO  ProgressMeter -       chr1:244970237              0.0                 32846        2265241.4
+05:58:49.215 INFO  ProgressMeter - Traversal complete. Processed 32846 total variants in 0.0 minutes.
+05:58:49.230 INFO  SelectVariants - Shutting down engine
+[April 2, 2024 at 5:58:49 AM GMT] org.broadinstitute.hellbender.tools.walkers.variantutils.SelectVariants done. Elapsed time: 0.03 minutes.
+Runtime.totalMemory()=352321536

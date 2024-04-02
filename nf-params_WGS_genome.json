@@ -1,0 +1,19 @@
+{    
+    "input": "samplesheet_single_vcf.csv",
+    "outdir": "run08/",
+
+    "analysis_type": "wgs",
+    "vcfanno_resources": "/home/user2/Desktop/raredisease-dev/reference/vcfanno_resources.txt",
+    "vcfanno_toml": "/home/user2/Desktop/raredisease-dev/reference/vcfanno_config.toml",
+
+    "genome": "GRCh38",
+    "vep_cache_version": 107,
+    "vep_cache": "/home/user2/Desktop/raredisease-dev/reference/38/vep_cache/",
+    "fasta" : "/home/user2/Desktop/raredisease-dev/reference/INDEX/genome.fa",
+    "fai": "/home/user2/Desktop/raredisease-dev/reference/INDEX/genome.fa.fai",
+    "gnomad_af": "/home/user2/Desktop/raredisease-dev/reference/gnomad_reformated_GRCh38.tab.gz", 
+    "score_config_snv": "/home/user2/Desktop/raredisease-dev/reference/rank_model_snv.ini",
+    "ped_file" : "NA12878.ped",
+    "skip_vep_filter" : true
+   
+}

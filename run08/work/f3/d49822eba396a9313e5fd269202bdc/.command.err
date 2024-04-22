@@ -1,5 +1,0 @@
-Number of target samples: 1
-Number of --estimate-AF samples: 0
-Number of sites in the buffer/overlap: unlimited
-Number of lines overlapping with --AF-file/processed: 350090/253932
-Number of lines filtered/no AF/no alt/multiallelic/dup: 0/58056/0/0/82
